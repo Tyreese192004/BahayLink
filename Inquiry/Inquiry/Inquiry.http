@@ -1,0 +1,43 @@
+@Inquiry_HostAddress = http://localhost:5115
+
+### 1. Simple Login (Admin)
+POST {{Inquiry_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@bahaylink.ph",
+  "password": "Admin123.",
+  "rememberMe": true
+}
+
+###
+
+### 2. Register New Renter
+POST {{Inquiry_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Juan",
+  "lastName": "Dela Cruz",
+  "email": "juan.renter@example.com",
+  "phone": "09123456789",
+  "password": "Password123!"
+}
+
+###
+
+### 3. Logout
+POST {{Inquiry_HostAddress}}/api/auth/logout
+Content-Type: application/json
+
+###
+
+### 4. Get All Users
+GET {{Inquiry_HostAddress}}/api/users
+Accept: application/json
+
+###
+
+### 5. Get User By ID
+GET {{Inquiry_HostAddress}}/api/users/1
+Accept: application/json
